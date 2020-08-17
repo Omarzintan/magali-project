@@ -1,0 +1,51 @@
+#+begin_src learnings
+*Packages I installed* 
+1. web-mode
+2. company-web
+3. yasnippet
+4. emmet-mode
+5. added hooks and set indentations and other settings in .emacs file
+6. added this to .emacs file for live server functionality: 
+(require 'simple-httpd)
+(setq httpd-root "/Users/zintan/magali-project")
+But this setq did not work so I did "M-x httpd-serve-directory" and chose the directory "/Users/zintan/magali-project"
+
+*How to run the website from emacs*
+1. Make changes to your file
+2. Run M-x httpd-start
+3. Open the file you want to checkout by going to http://localhost:8080/NAMEOFFILE.html
+
+*Setting up Flask* 
+Working with python and js files using flask (at this point, I am no longer using httpd)
+link to video: https://www.youtube.com/watch?v=HYO6GNOJMmQ
+
+*Communicating between python file and js file*
+link to blog: https://healeycodes.com/javascript/python/beginners/webdev/2019/04/11/talking-between-languages.html
+
+*Module for other people to follow*
+1. Create file system with the ff structure
+   - project (any name)
+       - app.py (app.py preferable)
+       - templates 
+           - index.html (any name)
+       - static
+           - script.js
+2. Set up Flask in app.py (watch youtube video. link: https://www.youtube.com/watch?v=HYO6GNOJMmQ ). Be comfortable with running app on local host through flask.
+3. Link app.py to script.js (Intro to JS Promises. Use the link to the blog as a resource: https://healeycodes.com/javascript/python/beginners/webdev/2019/04/11/talking-between-languages.html)
+4. Import ezsheets to app.py and use it to access Google sheet. (link: https://automatetheboringstuff.com/2e/chapter14/)
+5. Be able to display fetched information onto homepage using script.js.
+
+6. Figure out how to deploy this app (For me)
+#+end_src
+* <2020-08-11>
+** DONE Set up web server and web files on emacs
+** DONE Run a function from script.js 
+** DONE Set up flask on the python file in emacs
+** DONE Work through other examples presented in tutorial for python-to-js communication.
+** DONE Start working through tutorial for using ezsheets.
+* <2020-08-12>
+** DONE finish proof of concept for using sheets as a database for web app
+** DONE Make module for Magali to follow.
+** TODO Look for resources on how to deploy the web application.
+** TODO Work on data cleaning of the Spreadsheet while Magali goes through the module.
+** TODO Think about ways to write documentation for the site.

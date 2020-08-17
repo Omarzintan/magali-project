@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!--   <script src="http://localhost:8080/skewer"></script> -->
+        {% assets "main_js" %}
+        <script src="{{ ASSET_URL }}"></script>
+        {% endassets %}
+    </head>
+    <body onload="sayHello()">
+        <p> This is my HOME PAGE </p>
+        <button onclick="fetchHelloText()">fetch hello text</button>
+        <button onclick="fetchHelloJSON()"> fetch hello json</button>
+        <button onclick="postMessage()"> post a message to the python file </button>
+        <button onclick="getData()">get data from spreadsheet</button>
+        <div id="data"></div>
+    </body>
+</html>

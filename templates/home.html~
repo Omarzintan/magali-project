@@ -1,0 +1,13 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <script src="http://localhost:8080/skewer"></script>
+        <script src="script.js"></script>
+    </head>
+    <body onload="sayHello()">
+        <p> This is my HOME PAGE </p>
+        <button onclick="fetchHelloText()">fetch hello text</button>
+        <button onclick="fetchHelloJSON()"> fetch hello json</button>
+    </body>
+</html>
