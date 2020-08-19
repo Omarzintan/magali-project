@@ -23,14 +23,15 @@ link to video: https://www.youtube.com/watch?v=HYO6GNOJMmQ
 link to blog: https://healeycodes.com/javascript/python/beginners/webdev/2019/04/11/talking-between-languages.html
 
 *Module for other people to follow*
-1. Create file system with the ff structure
-   - project (any name)
+1. Create file system with the following structure
+   - project (any name - cs-resources )
        - app.py (app.py preferable)
        - templates 
            - index.html (any name)
        - static
            - script.js
 2. Set up Flask in app.py (watch youtube video. link: https://www.youtube.com/watch?v=HYO6GNOJMmQ ). Be comfortable with running app on local host through flask.
+   - pip install flas
 3. Link app.py to script.js (Intro to JS Promises. Use the link to the blog as a resource: https://healeycodes.com/javascript/python/beginners/webdev/2019/04/11/talking-between-languages.html)
 4. Import ezsheets to app.py and use it to access Google sheet. (link: https://automatetheboringstuff.com/2e/chapter14/)
 5. Be able to display fetched information onto homepage using script.js.
