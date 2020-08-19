@@ -49,7 +49,7 @@ function postMessage() {
 function getData() {
     fetch('/data')
         .then(function(response) {
-            console.log(response)
+            console.log(response);
             return response.json();
         }).then(function(results) {
             dataDiv = document.getElementById('data');
