@@ -10,6 +10,9 @@ assets = Environment(app)
 
 assets.register('main_js', js)
 
+@app.route('/')
+return render_template('home.html')
+
 @app.route('/hello', methods=['GET', 'POST'])
 def hello():
 
