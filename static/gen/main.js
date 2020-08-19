@@ -45,9 +45,11 @@ function postMessage() {
     });
 }
 
+/* Gets data from Spreadsheet and displays it */
 function getData() {
     fetch('/data')
         .then(function(response) {
+            console.log(response);
             return response.json();
         }).then(function(results) {
             dataDiv = document.getElementById('data');
@@ -60,7 +62,6 @@ function getData() {
                 categoryDiv.appendChild(categoryList);
                 dataDiv.appendChild(categoryDiv);
             }
-            
         });
 }
 
@@ -76,6 +77,5 @@ function makeList(array) {
         listElement.append(linkElement);
         unorderedListElement.appendChild(listElement);
     }
-    console.log(array);
     return unorderedListElement;
 }
