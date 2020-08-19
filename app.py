@@ -55,3 +55,6 @@ def getData():
             j+=1
         i+=1
     return jsonify(results)
+
+if __name__ == '__main__':
+    app.run()
