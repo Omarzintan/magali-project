@@ -38,6 +38,15 @@ link to blog: https://healeycodes.com/javascript/python/beginners/webdev/2019/04
 
 6. Figure out how to deploy this app (For me)
 #+end_src
+#+begin_src extension
+V0 - basic
+V1 - use react 
+V2 - automate web app  database
+V3 - change datastore (to something more secure / personal datastore)
+V4 - host on personal server
+V5 - translate to other languages
+v6 -  automate tags (using ML)
+#+end_src
 * <2020-08-11>
 ** DONE Set up web server and web files on emacs
 ** DONE Run a function from script.js 
@@ -47,6 +56,16 @@ link to blog: https://healeycodes.com/javascript/python/beginners/webdev/2019/04
 * <2020-08-12>
 ** DONE finish proof of concept for using sheets as a database for web app
 ** DONE Make module for Magali to follow.
-** TODO Look for resources on how to deploy the web application.
+** DONE Look for resources on how to deploy the web application.
+* <2020-08-18>
+** DONE deploy test site
+#+begin_src
+upgraded google auth using pip
+Deployed website 
+useful video: https://www.youtube.com/watch?v=JBGC9Dp9cXI
+ran app locally using 'gunicorn app:app'
+#+end_src
 ** TODO Work on data cleaning of the Spreadsheet while Magali goes through the module.
 ** TODO Think about ways to write documentation for the site.
+* <2020-08-21>
+** TODO Lookup airtable for the cs resources app
