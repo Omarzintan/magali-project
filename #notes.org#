@@ -1,4 +1,6 @@
-#+begin_src learnings
+* learnings and documentation
+** Web dev using emacs
+*** Packages I installed
 *Packages I installed* 
 1. web-mode
 2. company-web
@@ -9,20 +11,21 @@
 (require 'simple-httpd)
 (setq httpd-root "/Users/zintan/magali-project")
 But this setq did not work so I did "M-x httpd-serve-directory" and chose the directory "/Users/zintan/magali-project"
-
+*** How to run the website from emacs
 *How to run the website from emacs*
 1. Make changes to your file
 2. Run M-x httpd-start
 3. Open the file you want to checkout by going to http://localhost:8080/NAMEOFFILE.html
-
+** Making python-js web app
+*** working with python and js using flask
 *Setting up Flask* 
 Working with python and js files using flask (at this point, I am no longer using httpd)
 link to video: https://www.youtube.com/watch?v=HYO6GNOJMmQ
-
+*** communicating between python file and js file
 *Communicating between python file and js file*
 link to blog: https://healeycodes.com/javascript/python/beginners/webdev/2019/04/11/talking-between-languages.html
-
-*Module for other people to follow* 
+*** Documentation V0
+*Docs for other people to follow* 
 1. Create file system with the following structure
    - project (any name - cs-resources )
        - app.py (app.py preferable)
@@ -37,9 +40,9 @@ link to blog: https://healeycodes.com/javascript/python/beginners/webdev/2019/04
 5. Be able to display fetched information onto homepage using script.js. [DEPRECATED STEP]
 
 6. Figure out how to deploy this app (For me) [DEPLOYED onto heroku]
-
-*Updated Module*
-1. Steps 1-3 are still valid
+*** Documentation V1
+*Updated Docs*
+1. Steps 1-3 from  Documentation V0 are still valid
 2. Create service account and go through authentication logistical steps (link:https://medium.com/@denisluiz/python-with-google-sheets-service-account-step-by-step-8f74c26ed28e)
 3. Take steps to ensure client_secret is secured (commit at first, deploy to heroku master, remove from commit and then you can add it to .gigignore and push to github) 
 3. Follow steps to deploying on heroku [Flesh out more]  (links:
@@ -50,7 +53,10 @@ https://www.youtube.com/watch?v=JBGC9Dp9cXI
 rough steps: create heroku account, ensure your project is a git repo,  download Heroku CLI, create heroku project, setup Procfile, setup requirements.txt
 )
 4. Figure out any bugs ( Remember our Procfile for heroku uses gunicorn)
-#+end_src
+
+NOTE: to secure creds file: download the file into your repository, add the name of the file to your .gitignore, set the creds file as a heroku config variable by typing *heroku config:set GOOGLE_CREDS='CONTENTS OF YOUR CREDS FILE'* The quotes are important. The name GOOGLE_CREDS is not important, you can use whatever name you want.
+
+* Extensions to web app
 #+begin_src extensions
 V0 - basic
 V1 - use react 
@@ -87,3 +93,6 @@ ran app locally using 'gunicorn app:app'
 *** DONE get sheet values
 *** DONE return these values as json
 ** DONE deploy heroku app and ensure that API calls are working
+* <2020-08-23>
+** DONE secure creds file
+** TODO delete exposed creds file from Github
