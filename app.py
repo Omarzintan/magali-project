@@ -42,7 +42,7 @@ def getData():
     sheet_name = request.args.get('category')
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
     # credsenvVar = json from environment
-    secret_file_var = os.getenv('GOOGLE_CREDS')
+    secret_file_var = os.environ.get('GOOGLE_CREDS')
     secret_file = json.loads(secret_file_var)
     # check for if the env var is not found
     # set secret file to JSON.parse(credsenvVar)
