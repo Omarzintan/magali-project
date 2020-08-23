@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request, render_template
 from flask_assets import Bundle, Environment
+import json
 
 import pickle
 import os.path
@@ -40,12 +41,17 @@ def getData():
     # set sheet_name to argument
     sheet_name = request.args.get('category')
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-    secret_file = os.path.join('client_secret.json')
+    # credsenvVar = json from environment
+    secret_file_var = os.getenv('GOOGLE_CREDS')
+    secret_file = json.loads(secret_file_var)
+    # check for if the env var is not found
+    # set secret file to JSON.parse(credsenvVar)
+    #secret_file = os.path.join('client_secret.json')
 
     SPREADSHEET_ID = '1ymSnsFKZGCtjU6idXxoVtWARedas7xIFcF_WcRyvkL0'
     RANGE_NAME = sheet_name+'!A2:B150'
 
-    credentials = service_account.Credentials.from_service_account_file(secret_file, scopes=SCOPES)
+    credentials = service_account.Credentials.from_service_account_info(secret_file, scopes=SCOPES)
     service = build('sheets', 'v4', credentials=credentials)
 
     sheet_values = service.spreadsheets().values().get(spreadsheetId=SPREADSHEET_ID, range=RANGE_NAME).execute()
