@@ -1,5 +1,7 @@
 # Do not push these files
 credentials-sheets.json
 notes.org
+credentials.json
+client_secret.json
 token-drive.pickle
 token-sheets.pickle
