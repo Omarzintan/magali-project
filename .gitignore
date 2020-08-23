@@ -5,3 +5,8 @@ credentials.json
 client_secret.json
 token-drive.pickle
 token-sheets.pickle
+*~
+*#
+**#
+*.pyc
+.DS_Store
