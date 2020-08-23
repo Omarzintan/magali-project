@@ -9,9 +9,14 @@ import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
+from apiclient import discovery
+from google.oauth2 import service_account
+
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
+secret_file = os.path.join(os.getcwd(), 'client_secret.json')
+
 
 # The ID and range of a sample spreadsheet.
 SAMPLE_SPREADSHEET_ID = '1kX_YT4AB2TjMurYKjmkvKrSix0C51lIkaHXBVpbx8r0'
@@ -116,6 +121,16 @@ def getData1():
             #print('%s, %s' % (row[0], row[4]))
         return jsonify(values)
 
+@app.route('/data2')
+def getData2():
+    credentials = service_account.Credentials.from_service_account_file(secret_file, scopes=SCOPES)
+    service = build('sheets', 'v4', credentials=credentials)
+
+    sheet = service.spreadsheets()
+    result = sheet.values().get(spreadsheetId=SAMPLE_SPREADSHEET_ID, range=SAMPLE_RANGE_NAME).execute()
+    values = result.get('values', [])
+
+    return jsonify(values)
 
 if __name__ == '__main__':
     app.run()
