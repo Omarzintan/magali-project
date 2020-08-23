@@ -1,8 +1,8 @@
+import os
 from flask import Flask, jsonify, request, render_template
 from flask_assets import Bundle, Environment
 import json
 
-import os
 import pickle
 import os.path
 from googleapiclient.discovery import build
@@ -43,7 +43,7 @@ def getData():
     sheet_name = request.args.get('category')
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
     # credsenvVar = json from environment
-    secret_file_var = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS', None)
+    secret_file_var = os.environ.get('GOOGLE_CREDS', 'var not found')
     secret_file = json.loads(secret_file_var)
     # check for if the env var is not found
     # set secret file to JSON.parse(credsenvVar)
