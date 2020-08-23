@@ -38,7 +38,7 @@ link to blog: https://healeycodes.com/javascript/python/beginners/webdev/2019/04
 
 6. Figure out how to deploy this app (For me)
 #+end_src
-#+begin_src extension
+#+begin_src extensions
 V0 - basic
 V1 - use react 
 V2 - automate web app  database
@@ -67,5 +67,7 @@ ran app locally using 'gunicorn app:app'
 #+end_src
 ** TODO Work on data cleaning of the Spreadsheet while Magali goes through the module.
 ** TODO Think about ways to write documentation for the site.
-* <2020-08-21>
+* <2020-08-22>
+** TODO Attempt deploying with Google oath using example in the docs
 ** TODO Lookup airtable for the cs resources app
+
