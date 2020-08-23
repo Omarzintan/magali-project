@@ -15,7 +15,7 @@ from google.oauth2 import service_account
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-secret_file = os.path.join( 'client_secret.json')
+secret_file = os.path.join('client_secret.json')
 
 
 # The ID and range of a sample spreadsheet.
@@ -98,7 +98,7 @@ def getData1():
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
                 'credentials.json', SCOPES)
-            creds = flow.run_console()
+            creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
