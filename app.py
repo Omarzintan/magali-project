@@ -15,7 +15,7 @@ from google.oauth2 import service_account
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
-secret_file = os.path.join(os.getcwd(), 'client_secret.json')
+secret_file = os.path.join( 'client_secret.json')
 
 
 # The ID and range of a sample spreadsheet.
